@@ -1,0 +1,11 @@
+groups:
+  - name: monitoring-demo
+    rules:
+      - alert: HighHeapUsage
+        expr: (jvm_memory_used_bytes{area="heap"} / jvm_memory_max_bytes{area="heap"}) > 0.70
+        for: 15s
+        labels:
+          severity: warning
+        annotations:
+          summary: "JVM heap usage is above 70%"
+          description: "Heap usage has exceeded 70% for 15 seconds. Check the Grafana dashboard."

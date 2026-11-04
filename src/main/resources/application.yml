@@ -1,0 +1,18 @@
+server:
+  port: 8080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus,metrics
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  metrics:
+    tags:
+      application: monitoring-demo
+info:
+  app:
+    name: Spring Boot Monitoring Demo
+    description: Memory load generator with Prometheus metrics

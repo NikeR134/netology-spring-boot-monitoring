@@ -38,4 +38,3 @@ Workflow GitHub Actions в `.github/workflows/ci.yml` собирает JAR пр�
 ## Linux deploy
 
 См. [deploy/README.md](deploy/README.md): Docker, systemd, nginx reverse proxy, firewall и логи journalctl.
-
